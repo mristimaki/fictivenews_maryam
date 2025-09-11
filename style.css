@@ -40,7 +40,7 @@ body {
 .main-nav a {
     text-decoration: none;
     color: white;
-    text-transform: capitalize; /* funkar inte än */
+    text-transform: uppercase; /* capitalize DID work but I expected UPPERCASE */
 }
 
 .main-nav a:hover {
