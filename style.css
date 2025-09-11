@@ -1,3 +1,8 @@
+:root {
+    --primary-bg: (rgb(87, 136, 87);
+}
+/* använd gärna variabler för att lägga färg på primary/secondary */
+
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +28,7 @@ body {
 /* swithch to hamburger menu later */
 .main-nav {
     display: flex;
-    background-color: rgb(87, 136, 87);
+    background-color: (--primary-bg);
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
