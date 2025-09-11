@@ -83,5 +83,8 @@ main {
 }
 
 footer {
-    background-color: lightgrey; 
+    background-color: lightgrey;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
