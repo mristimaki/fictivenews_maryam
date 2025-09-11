@@ -20,26 +20,34 @@ body {
     font-weight: 700;
 }
 
-nav {
+/* swithch to hamburger menu later */
+.main-nav {
     display: flex;
-    flex-direction: column;
     background-color: rgb(87, 136, 87);
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
 }
 
-#nav-wrapper a {
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 3rem;
+}
+
+.main-nav a {
     text-decoration: none;
     color: white;
     text-transform: capitalize; /* funkar inte än */
 }
 
-#nav-wrapper a:hover {
+.main-nav a:hover {
     text-decoration: underline;
 }
 
-#nav-wrapper .active {
+.main-nav .active {
     text-decoration: underline;
 }
 
