@@ -56,11 +56,11 @@ main {
 .main-nav {
     display: flex;
     flex-direction: row;
-
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
-    border: 1px solid rgb(87, 136, 87);
+    border-bottom: 2px solid rgb(87, 136, 87);
+    border-top: 2px solid rgb(87, 136, 87);
 }
 
 .main-nav ul {
@@ -76,14 +76,20 @@ main {
     font-weight: bold;
     color: black;
     text-transform: uppercase; /* capitalize DID work but I expected UPPERCASE */
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem;
 }
 
 .main-nav a:hover {
-    text-decoration: underline;
+    border-bottom-style: solid;
+    border-color: rgb(87, 136, 87);
+    transition: 0.1s ease;
 }
 
 .main-nav .active {
-    text-decoration: underline;
+    border-bottom-style: solid;
+    border-color: rgb(87, 136, 87);
 }
 
 .main-content {
@@ -140,7 +146,7 @@ main {
 }
 
 footer {
-    border: 1px solid rgb(87, 136, 87);
+    border-top: 1px solid rgb(87, 136, 87);
     background-color: white;
     position: fixed;
     bottom: 0;
