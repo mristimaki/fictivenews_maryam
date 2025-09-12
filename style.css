@@ -45,6 +45,7 @@ main {
         "sidebar content";
     gap: 2rem;
     margin: 0 auto;
+    margin-bottom: 4rem;
 }
 
 /* swithch to hamburger menu later */
@@ -132,7 +133,7 @@ main {
 }
 
 footer {
-    background-color: lightgrey;
+    background-color: rgb(87, 136, 87);
     position: fixed;
     bottom: 0;
     width: 100%;
