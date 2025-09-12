@@ -14,19 +14,22 @@ body {
 }
 
 button {
+    background-color: rgb(87, 136, 87);
     padding: 0.5rem;
     margin-top: 0.5rem;
-    border: 1px solid black;
     border-radius: 7px;
+    border: 0;
+    appearance: none;
 }
 
 button a {
     text-decoration: none;
-    color: black;
+    color: whitesmoke;
 }
 
 button:hover {
-    background-color: rgb(87, 136, 87);
+    color: white;
+    background-color: rgb(107, 165, 107);
 }
 
 #top-header {
