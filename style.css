@@ -146,6 +146,10 @@ main {
     padding: 0.5rem;
 }
 
+#hero-section a:hover {
+    border-bottom: 2px solid rgb(87, 136, 87);
+}
+
 .article {
     display: flex;
     flex-direction: column;
@@ -154,10 +158,19 @@ main {
     margin-bottom: 1rem;
 }
 
+article a {
+    color: rgb(87, 136, 87);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.article a:hover {
+    border-bottom: 2px solid rgb(87, 136, 87);
+}
+
 .by-author {
     font-family: "Quattrocento", serif;
     color: gray;
-    margin-bottom: 0.5rem;
 }
 
 footer {
