@@ -9,6 +9,22 @@ body {
     font-family: "Lora", serif;
 }
 
+button {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+}
+
+button:hover {
+    background-color: rgb(87, 136, 87);
+}
+
 #top-header {
     display: flex;
     flex-direction: column;
@@ -28,7 +44,6 @@ main {
     grid-template-areas: 
         "sidebar content";
     gap: 2rem;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -71,7 +86,6 @@ main {
     margin: 1rem;
 }
 
-/* the sidebar is off when screen bigger than 1200px, fix with mediaQ */
 .sidebar {
     grid-area: sidebar;
     display: flex;
@@ -85,7 +99,6 @@ main {
     color: black;
 }
 
-
 .sidebar a {
     color: black;
     text-decoration: none;
@@ -95,17 +108,27 @@ main {
     text-decoration: underline;
 }
 
-#hero-section {
-
+.hero > div img {
+    object-fit: contain;
+    max-width: 90%;
+    border-radius: 7px;
 }
 
+#hero-section {
+    padding: 0.5rem;
+}
 
 .article {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     align-items: start;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+.by-author {
+    color: gray;
+    margin-bottom: 0.5rem;
 }
 
 footer {
