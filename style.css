@@ -5,8 +5,18 @@ lägga färg på primary/secondary ?? */
     padding: 0;
 }
 
-h1, h2, h3, h4 {
+h1 {
     font-family: "Quattrocento", serif;
+    font-size: 3rem;
+}
+
+h2, h3, h4 {
+    font-family: "Quattrocento", serif;
+    padding-bottom: 0.1rem;
+}
+
+.text-gray {
+    color: gray;
 }
 
 body {
@@ -33,16 +43,12 @@ button:hover {
 }
 
 #top-header {
+    font-family: "Quattrocento", serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 1rem;
-}
-
-#top-header h1 {
-    font-family: "Quattrocento", serif;
-    font-weight: 700;
 }
 
 main {
@@ -82,6 +88,7 @@ main {
     position: relative;
     display: inline-block;
     padding: 0.5rem;
+    text-align: center;
 }
 
 .main-nav a:hover {
@@ -110,9 +117,10 @@ main {
     gap: 1rem;
 }
 
-.sidebar ul {
+.sidebar ul li {
     list-style: none;
     color: black;
+    padding-bottom: 0.5rem;
 }
 
 .sidebar a {
@@ -121,7 +129,7 @@ main {
 }
 
 .sidebar a:hover {
-    text-decoration: underline;
+    border-bottom: 2px solid rgb(87, 136, 87);
 }
 
 .hero > div img {
