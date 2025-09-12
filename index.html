@@ -37,96 +37,101 @@
     </header>
 
     <main>
+        <div class="content-wrapper">
             <!-- Left sidebar content! -->
-        <aside class="sidebar">
-            <div class="trending">
-                <h3>Trending Stories</h3>
-                <ul>
-                    <li><a href="#">The Science Behind the Gathered Table: How Food Connects Our Bodies, Earth, and Souls</a></li>
-                    <li><a href="#">New Research: Why Your Brain Craves Forest Time</a></li>
-                    <li><a href="#">The Sunday Table That Saved a Neighborhood</a></li>
-                </ul>
+            <aside class="sidebar">
+                <div class="trending">
+                    <h3>Trending Stories</h3>
+                    <ul>
+                        <li><a href="#">The Science Behind the Gathered Table: How Food Connects Our Bodies, Earth, and Souls</a></li>
+                        <li><a href="#">New Research: Why Your Brain Craves Forest Time</a></li>
+                        <li><a href="#">The Sunday Table That Saved a Neighborhood</a></li>
+                    </ul>
+                </div>
+
+                <div class="seasonal-focus">
+                    <h3>Seasonal Focus</h3>
+                    <p><b>October:</b></p> 
+                    <p class="text-green">Wild mushroom season</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div class="quick-recipes">
+                    <h3>Gathered Recipes</h3>
+                    <!-- Simple ingredient recipes -->
+                    <ul>
+                        <li><a href="#">Cedar-Planked Trout with Wild Herbs: A Lakeside Tradition</a></li>
+                        <li><a href="#">Creamy Chicken Pasta - hearty and family-friendly</a></li>
+                        <li><a href="#">Creamy Mushroom Pasta - perfect autumn comfort food</a></li>
+                        <li><a href="#"></a>Outdoor French Toast - a delightful sweet treat with mascarpone cream and almond paste</li>
+                        <li><a href="#">Campfire Coffee and Swedish Fika</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- FIX MAIN STRUCTURE ITS A BIT MESSY NOW! -->
+            <!-- The padding/margin in hero does not seem to work properly
+            I need to fix so that all of the content is centered 
+            with background showing on the side and between elements like svt -->
+            <div class="main-content">
+                <!-- Hero section goes here -->
+                <section id="hero-section">
+                    <article class="hero">
+                        <div>
+                            <img src="images/pexels-josh-willink-11499-701016.jpg" alt="">
+                        </div>
+                        <header>
+                            <h2>The Digital Detox That Changed Everything:</h2>
+                            <h3>How One Family Found Balance Through Simple Nature Connection</h3>
+                            <p class="by-author">By Emma Richardson | September 8, 2025</p>
+                        </header>
+                        <p>Three years ago, the Martinez family was drowning in screens and constant stress. Today, their simple 15-minute daily nature routine has transformed not just their kids' behavior, but their entire family dynamic. From tantrum-prone toddlers to anxious teenagers, discover how micro-doses of outdoor time created lasting changes backed by breakthrough research on children's brain development.</p>
+                        <a href="#">Read full story</a>
+                    </article>
+                </section>
+
+                <!-- Main content and articles goes here! -->
+                <section class="news-feed">
+                    <!-- Articles goes here -->
+                    <article class="article">
+                        <header>
+                            <h3>NATURE'S MEDICINE</h3>
+                            <h4>New Research: Why Your Brain Craves Forest Time</h4>
+                            <p class="by-author">By Dr. Michael Rodriguez | September 1, 2025</p>
+                        </header>
+                        <p>Japanese researchers have long studied "shinrin-yoku" or forest bathing, but new findings from Stanford University reveal exactly what happens in our brains when we trade concrete for canopy..</p>
+                        <!-- instead of just having a <a> tag, use button for semantic meaning -->
+                        <a href="#">Read full story</a>
+                    </article>
+
+                    <article class="article">
+                        <header>
+                            <h3>TRAIL & TABLE</h3>
+                            <h4>The Secret Language of Mushrooms: A Beginner's Guide to Forest Foraging</h4>
+                            <p class="by-author">By Sarah Chen | September 2, 2025</p>
+                        </header>
+                        <p>This weekend marks the beginning of mushroom season across the Pacific Northwest, and experienced foragers like Torres are sharing their knowledge through guided walks that combine gentle hiking with hands-on education..</p>
+                        <!-- instead of just having a <a> tag, use button for semantic meaning -->
+                        <a href="#">Read full story</a>
+                    </article>
+
+                    <article class="article">
+                        <header>
+                            <h3>COMMUNITY HARVEST</h3>
+                            <h4>The Sunday Table That Saved a Neighborhood</h4>
+                            <p class="by-author text-gray">By Rosa Martinez | August 30, 2025</p>
+                        </header>
+                        <p>A handwritten note on the community board: 
+                        <br>
+                        "Sunday dinners. Bring something to share. All welcome." Three people showed up the first week.
+                        <br>
+                        Now the weekly gathering draws families, college students, retirees, and newcomers from twelve different countries. The potluck has evolved into something deeper—a support network that extends far beyond Sunday evenings..
+                        </p>
+                        <!-- instead of just having a <a> tag, use button for semantic meaning -->
+                        <a href="#">Read full story</a>
+                    </article>
+                </section>
             </div>
-
-            <div class="seasonal-focus">
-                <h3>Seasonal Focus</h3>
-                <p><b>October:</b></p> 
-                <p class="text-green">Wild mushroom season</p>
-                <a href="#">Learn more</a>
-            </div>
-
-            <div class="quick-recipes">
-                <h3>Gathered Recipes</h3>
-                <!-- Simple ingredient recipes -->
-                 <ul>
-                    <li><a href="#">Cedar-Planked Trout with Wild Herbs: A Lakeside Tradition</a></li>
-                    <li><a href="#">Creamy Chicken Pasta - hearty and family-friendly</a></li>
-                    <li><a href="#">Creamy Mushroom Pasta - perfect autumn comfort food</a></li>
-                    <li><a href="#"></a>Outdoor French Toast - a delightful sweet treat with mascarpone cream and almond paste</li>
-                    <li><a href="#">Campfire Coffee and Swedish Fika</a></li>
-                 </ul>
-            </div>
-        </aside>
-
-        <!-- FIX MAIN STRUCTURE ITS A BIT MESSY NOW! -->
-        <div class="main-content">
-            <!-- Hero section goes here -->
-            <section id="hero-section">
-                <article class="hero">
-                    <div>
-                        <img src="images/pexels-josh-willink-11499-701016.jpg" alt="">
-                    </div>
-                    <header>
-                        <h2>The Digital Detox That Changed Everything:</h2>
-                        <h3>How One Family Found Balance Through Simple Nature Connection</h3>
-                        <p class="by-author">By Emma Richardson | September 8, 2025</p>
-                    </header>
-                    <p>Three years ago, the Martinez family was drowning in screens and constant stress. Today, their simple 15-minute daily nature routine has transformed not just their kids' behavior, but their entire family dynamic. From tantrum-prone toddlers to anxious teenagers, discover how micro-doses of outdoor time created lasting changes backed by breakthrough research on children's brain development.</p>
-                    <a href="#">Read full story</a>
-                </article>
-            </section>
-
-            <!-- Main content and articles goes here! -->
-            <section class="news-feed">
-                <!-- Articles goes here -->
-                <article class="article">
-                    <header>
-                        <h3>NATURE'S MEDICINE</h3>
-                        <h4>New Research: Why Your Brain Craves Forest Time</h4>
-                        <p class="by-author">By Dr. Michael Rodriguez | September 1, 2025</p>
-                    </header>
-                    <p>Japanese researchers have long studied "shinrin-yoku" or forest bathing, but new findings from Stanford University reveal exactly what happens in our brains when we trade concrete for canopy..</p>
-                    <!-- instead of just having a <a> tag, use button for semantic meaning -->
-                    <a href="#">Read full story</a>
-                </article>
-
-                <article class="article">
-                    <header>
-                        <h3>TRAIL & TABLE</h3>
-                        <h4>The Secret Language of Mushrooms: A Beginner's Guide to Forest Foraging</h4>
-                        <p class="by-author">By Sarah Chen | September 2, 2025</p>
-                    </header>
-                    <p>This weekend marks the beginning of mushroom season across the Pacific Northwest, and experienced foragers like Torres are sharing their knowledge through guided walks that combine gentle hiking with hands-on education..</p>
-                    <!-- instead of just having a <a> tag, use button for semantic meaning -->
-                    <a href="#">Read full story</a>
-                </article>
-
-                <article class="article">
-                    <header>
-                        <h3>COMMUNITY HARVEST</h3>
-                        <h4>The Sunday Table That Saved a Neighborhood</h4>
-                        <p class="by-author text-gray">By Rosa Martinez | August 30, 2025</p>
-                    </header>
-                    <p>A handwritten note on the community board: 
-                    <br>
-                    "Sunday dinners. Bring something to share. All welcome." Three people showed up the first week.
-                    <br>
-                    Now the weekly gathering draws families, college students, retirees, and newcomers from twelve different countries. The potluck has evolved into something deeper—a support network that extends far beyond Sunday evenings..
-                    </p>
-                    <!-- instead of just having a <a> tag, use button for semantic meaning -->
-                    <a href="#">Read full story</a>
-                </article>
-            </section>
         </div>
     </main>
 

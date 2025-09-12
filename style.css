@@ -5,6 +5,15 @@ lägga färg på primary/secondary ?? */
     padding: 0;
 }
 
+header {
+    background-color: white;
+}
+
+body {
+    background-color: rgba(87, 136, 87, 0.5);
+    font-family: "Lato", serif;
+}
+
 h1 {
     font-family: "Quattrocento", serif;
     font-size: 3rem;
@@ -21,10 +30,6 @@ h2, h3, h4 {
 
 .text-green {
     color: rgb(87, 136, 87);
-}
-
-body {
-    font-family: "Lato", serif;
 }
 
 button {
@@ -56,12 +61,6 @@ button:hover {
 }
 
 main {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-template-areas: 
-        "sidebar content";
-    gap: 2rem;
-    margin: 0 auto;
     margin-bottom: 4rem;
 }
 
@@ -106,15 +105,23 @@ main {
     border-color: rgb(87, 136, 87);
 }
 
-.main-content {
+.content-wrapper {
     display: grid;
-    grid-area: content;
+    grid-template-columns: 500px 1fr;
     gap: 2rem;
-    margin: 1rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    background-color: white;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0;
 }
 
 .sidebar {
-    grid-area: sidebar;
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -150,11 +157,13 @@ main {
     border-bottom: 2px solid rgb(87, 136, 87);
 }
 
-.article {
+.article, .hero {
+    background-color: white;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     align-items: start;
+    padding: 1rem;
     margin-bottom: 1rem;
 }
 
