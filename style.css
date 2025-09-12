@@ -19,6 +19,10 @@ h2, h3, h4 {
     color: gray;
 }
 
+.text-green {
+    color: rgb(87, 136, 87);
+}
+
 body {
     font-family: "Lato", serif;
 }
