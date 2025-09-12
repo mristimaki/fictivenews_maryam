@@ -24,7 +24,7 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 200px 1fr;
     grid-template-areas: 
         "sidebar content";
     gap: 2rem;
@@ -64,15 +64,30 @@ main {
     text-decoration: underline;
 }
 
-.sidebar {
-    grid-area: sidebar;
-}
-
 .main-content {
     display: grid;
     grid-area: content;
     gap: 2rem;
+    margin: 1rem;
 }
+
+/* the sidebar is off when screen bigger than 1200px, fix with mediaQ */
+.sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    gap: 0.5rem;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+#hero-section {
+
+}
+
 
 .article {
     display: flex;
