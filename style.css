@@ -200,6 +200,12 @@ article a {
     color: gray;
 }
 
+.news-feed img {
+    object-fit: contain;
+    max-width: 50%;
+    border-radius: 3px;
+}
+
 footer {
     background-color: white;
     display: flex;
