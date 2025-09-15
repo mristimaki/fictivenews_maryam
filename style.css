@@ -161,7 +161,7 @@ main {
     margin: 0;
 }
 
-.hero > div img {
+.main-article > div img {
     object-fit: contain;
     width: 100%;
     border-radius: 3px;
@@ -175,7 +175,7 @@ main {
     border-bottom: 2px solid #547F54;
 }
 
-.article, .hero {
+.article, .main-article {
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -193,6 +193,12 @@ article a {
 
 .article a:hover {
     border-bottom: 2px solid #547F54;
+}
+
+.main-article ul {
+    list-style: circle;
+    margin-left: 3rem;
+    margin-bottom: 1rem;
 }
 
 .by-author {
