@@ -206,6 +206,12 @@ article a {
     border-radius: 3px;
 }
 
+blockquote {
+    text-align: center;
+    font-style: italic;
+    padding: 1rem;
+}
+
 footer {
     background-color: white;
     display: flex;
