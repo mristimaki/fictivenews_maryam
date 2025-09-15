@@ -66,7 +66,7 @@ main {
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
-    border-top: 2px solid #547F54;
+    border-top: 3px solid #547F54;
 }
 
 .main-nav ul {
