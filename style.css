@@ -185,6 +185,10 @@ main {
     margin-bottom: 1rem;
 }
 
+.main-article {
+    border-bottom: 3px solid #EFE7DF;
+}
+
 article a {
     color: #547F54;
     text-decoration: none;
@@ -199,11 +203,6 @@ article a {
     list-style: circle;
     margin-left: 3rem;
     margin-bottom: 1rem;
-}
-
-.main-article a {
-    text-decoration: none;
-    color: black;
 }
 
 .by-author {
