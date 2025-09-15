@@ -201,6 +201,11 @@ article a {
     margin-bottom: 1rem;
 }
 
+.main-article a {
+    text-decoration: none;
+    color: black;
+}
+
 .by-author {
     font-family: "Quattrocento", serif;
     color: gray;
