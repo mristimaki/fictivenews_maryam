@@ -61,7 +61,7 @@ button:hover {
 }
 
 main {
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
 }
 
 /* swithch to hamburger menu later */
@@ -71,7 +71,6 @@ main {
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
-    border-bottom: 2px solid rgb(87, 136, 87);
     border-top: 2px solid rgb(87, 136, 87);
 }
 
@@ -108,7 +107,7 @@ main {
 .content-wrapper {
     display: grid;
     grid-template-columns: 250px 1fr;
-    gap: 0.5rem;
+    gap: 0.3rem;
     max-width: 1200px;
     padding: 2rem;
 }
@@ -116,7 +115,7 @@ main {
 .main-content, 
 .sidebar {
     background-color: white;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 .sidebar {
@@ -188,9 +187,8 @@ article a {
 }
 
 footer {
-    border-top: 1px solid rgb(87, 136, 87);
     background-color: white;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
