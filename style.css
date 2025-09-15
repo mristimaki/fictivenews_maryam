@@ -12,6 +12,7 @@ header {
 body {
     background-color: #EFE7DF;
     font-family: "Lato", serif;
+    font-size: clamp(1rem, 2vw, 1.125rem);
 }
 
 h1, h2, h3, h4 {
