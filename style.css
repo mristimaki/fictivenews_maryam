@@ -72,6 +72,13 @@ button a {
     color: black;
 }
 
+article a {
+    color: #547F54;
+    text-decoration: none;
+    font-weight: bold;
+    padding-top: 0.5rem;
+}
+
 main {
     margin-bottom: 1rem;
 }
@@ -159,6 +166,14 @@ main {
     border-bottom: 2px solid #547F54;
 }
 
+#hero-section {
+    padding: 0.5rem;
+}
+
+#hero-section a:hover {
+    border-bottom: 2px solid #547F54;
+}
+
 .main-content {
     display: flex;
     flex-direction: column;
@@ -172,15 +187,7 @@ main {
     border-radius: 3px;
 }
 
-#hero-section {
-    padding: 0.5rem;
-}
-
-#hero-section a:hover {
-    border-bottom: 2px solid #547F54;
-}
-
-.article, .main-article {
+.main-article {
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -190,17 +197,29 @@ main {
     margin-bottom: 1rem;
 }
 
-.main-article {
+.main-article, .article-list {
     border-bottom: 3px solid #EFE7DF;
 }
 
-article a {
-    color: #547F54;
-    text-decoration: none;
-    font-weight: bold;
+.article-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    margin: 1rem;
+    gap: 2rem;
 }
 
-.article a:hover {
+.article-list > div img{
+    object-fit: contain;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.article-list header {
+    padding-bottom: 0.5rem;
+}
+
+.article-list a:hover {
     border-bottom: 2px solid #547F54;
 }
 
@@ -213,12 +232,6 @@ article a {
 .by-author {
     font-family: "Quattrocento", serif;
     color: gray;
-}
-
-.news-feed img {
-    object-fit: contain;
-    max-width: 50%;
-    border-radius: 3px;
 }
 
 blockquote {
