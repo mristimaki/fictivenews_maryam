@@ -1,12 +1,10 @@
-/* använd gärna root variabler för att 
-lägga färg på primary/secondary ?? */
+/* CSS VARIABLES ------------------------------- */
+
+
+/* RESET & BASE STYLES  ------------------------ */
 * {
     margin: 0;
     padding: 0;
-}
-
-header {
-    background-color: white;
 }
 
 body {
@@ -15,6 +13,7 @@ body {
     font-size: clamp(1rem, 2vw, 1.125rem);
 }
 
+/* TYPOGRAPHY  --------------------------------- */
 h1, h2, h3, h4 {
     font-family: "Quattrocento", serif;
     padding-bottom: 0.3rem;
@@ -36,6 +35,13 @@ h4 {
     font-size: clamp(1.1rem, 2.5vw, 1.4rem);
 }
 
+blockquote {
+    text-align: center;
+    font-style: italic;
+    padding: 1rem;
+}
+
+/* UTILITY CLASSES  --------------------------- */
 .text-gray {
     color: gray;
 }
@@ -44,6 +50,12 @@ h4 {
     color: #547F54;
 }
 
+.by-author {
+    font-family: "Quattrocento", serif;
+    color: gray;
+}
+
+/* BUTTONS & FORM ELEMENTS  --------------------------- */
 button {
     background-color: #547F54;
     padding: 0.5rem;
@@ -56,6 +68,12 @@ button {
 button a {
     text-decoration: none;
     color: whitesmoke;
+}
+
+/* HEADER & NAVIGATION  ------------------------------ */
+
+header {
+    background-color: white;
 }
 
 #top-header {
@@ -72,18 +90,7 @@ button a {
     color: black;
 }
 
-article a {
-    color: #547F54;
-    text-decoration: none;
-    font-weight: bold;
-    padding-top: 0.5rem;
-}
-
-main {
-    margin-bottom: 1rem;
-}
-
-/* swithch to hamburger menu later */
+/* Navigation - switch to hamburger menu later */
 .main-nav {
     display: flex;
     flex-direction: row;
@@ -123,6 +130,11 @@ main {
     border-color: #547F54;
 }
 
+/* LAYOUT COMPONENTS  ------------------------------ */
+main {
+    margin-bottom: 1rem;
+}
+
 .content-wrapper {
     display: grid;
     grid-template-columns: 250px 1fr;
@@ -131,12 +143,16 @@ main {
     padding: 2rem;
 }
 
-.main-content, 
-.sidebar {
+.main-content {
     background-color: white;
     padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0;
 }
 
+/* SIDEBAR  --------------------------------------- */
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -166,6 +182,7 @@ main {
     border-bottom: 2px solid #547F54;
 }
 
+/* HERO SECTION  ---------------------------------- */
 #hero-section {
     padding: 0.5rem;
 }
@@ -174,19 +191,7 @@ main {
     border-bottom: 2px solid #547F54;
 }
 
-.main-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin: 0;
-}
-
-.main-article > div img {
-    object-fit: contain;
-    width: 100%;
-    border-radius: 3px;
-}
-
+/* ARTICLES  -------------------------------------- */
 .main-article {
     background-color: white;
     display: flex;
@@ -195,18 +200,43 @@ main {
     align-items: start;
     padding: 1rem;
     margin-bottom: 1rem;
-}
-
-.main-article, .article-list {
     border-bottom: 3px solid #EFE7DF;
 }
 
+.main-article > div img {
+    object-fit: contain;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.main-article ul {
+    list-style: circle;
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Article links */
+article a {
+    color: #547F54;
+    text-decoration: none;
+    font-weight: bold;
+    padding-top: 0.5rem;
+}
+
+/* ARTICLE LIST  ----------------------------------- */
 .article-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 2rem;
     padding-bottom: 1rem;
     gap: 2rem;
+    border-bottom: 3px solid #EFE7DF;
+}
+
+.article-list > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .article-list > div img {
@@ -219,34 +249,12 @@ main {
     padding-bottom: 0.5rem;
 }
 
-.article-list > div {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
 .article-list a:hover {
     border-bottom: 2px solid #547F54;
     width: fit-content;
 }
 
-.main-article ul {
-    list-style: circle;
-    margin-left: 3rem;
-    margin-bottom: 1rem;
-}
-
-.by-author {
-    font-family: "Quattrocento", serif;
-    color: gray;
-}
-
-blockquote {
-    text-align: center;
-    font-style: italic;
-    padding: 1rem;
-}
-
+/* FOOTER  ---------------------------------------- */
 footer {
     background-color: white;
     display: flex;
@@ -254,7 +262,6 @@ footer {
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
-
 }
 
 footer a{
@@ -268,7 +275,7 @@ footer a{
     text-align: center;
 }
 
-    /* footer moves disturbingly when hovering */
+/* footer moves disturbingly when hovering - try box-sizing fix */
 footer a:hover {
     border-bottom-style: solid;
     border-color: #547F54;
