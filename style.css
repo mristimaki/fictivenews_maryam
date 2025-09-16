@@ -1,21 +1,31 @@
-/* CSS VARIABLES ------------------------------- */
+/* CSS VARIABLES -------------------------------------- */
+:root {
+    --primary-color: #547F54;
+    --primary-background: white;
+    --secondary-background: #EFE7DF;
+    --primary-text-color: black;
+    --secondary-text-color: gray;
+    --border-radius: 7px;
+    --border-width: 3px;
+    --font-primary: "Lato", serif;
+    --font-heading: "Quattrocento", serif;
+}
 
-
-/* RESET & BASE STYLES  ------------------------ */
+/* RESET & BASE STYLES  ------------------------------- */
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #EFE7DF;
-    font-family: "Lato", serif;
+    background-color: var(--secondary-background);
+    font-family: var(--font-primary);
     font-size: clamp(1rem, 2vw, 1.125rem);
 }
 
-/* TYPOGRAPHY  --------------------------------- */
+/* TYPOGRAPHY  --------------------------------------- */
 h1, h2, h3, h4 {
-    font-family: "Quattrocento", serif;
+    font-family: var(--font-heading);
     padding-bottom: 0.3rem;
 }
 
@@ -41,43 +51,37 @@ blockquote {
     padding: 1rem;
 }
 
-/* UTILITY CLASSES  --------------------------- */
+/* UTILITY CLASSES  ----------------------------------- */
 .text-gray {
-    color: gray;
+    color: var(--secondary-text-color);
 }
 
 .text-green {
-    color: #547F54;
+    color: var(--primary-color);
 }
 
 .by-author {
-    font-family: "Quattrocento", serif;
-    color: gray;
+    font-family: var(--font-heading);
+    color: var(--secondary-text-color);
 }
 
 /* BUTTONS & FORM ELEMENTS  --------------------------- */
 button {
-    background-color: #547F54;
+    background-color: var(--primary-color);
     padding: 0.5rem;
     margin-top: 0.5rem;
-    border-radius: 7px;
+    border-radius: var(--border-radius);
     border: 0;
     appearance: none;
 }
 
-button a {
-    text-decoration: none;
-    color: whitesmoke;
-}
-
 /* HEADER & NAVIGATION  ------------------------------ */
-
 header {
-    background-color: white;
+    background-color: var(--primary-background);
 }
 
 #top-header {
-    font-family: "Quattrocento", serif;
+    font-family: var(--font-heading);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,7 +91,7 @@ header {
 
 #top-header a {
     text-decoration: none;
-    color: black;
+    color: var(--primary-text-color);
 }
 
 /* Navigation - switch to hamburger menu later */
@@ -97,7 +101,7 @@ header {
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
-    border-top: 3px solid #547F54;
+    border-top: var(--border-width) solid var(--primary-color);
 }
 
 .main-nav ul {
@@ -111,7 +115,7 @@ header {
 .main-nav a {
     text-decoration: none;
     font-weight: bold;
-    color: black;
+    color: var(--primary-text-color);
     text-transform: uppercase;
     position: relative;
     display: inline-block;
@@ -121,16 +125,16 @@ header {
 
 .main-nav a:hover {
     border-bottom-style: solid;
-    border-color: #547F54;
+    border-color: var(--primary-color);
     transition: 0.1s ease;
 }
 
 .main-nav .active {
     border-bottom-style: solid;
-    border-color: #547F54;
+    border-color: var(--primary-color);
 }
 
-/* LAYOUT COMPONENTS  ------------------------------ */
+/* LAYOUT COMPONENTS  -------------------------------- */
 main {
     margin-bottom: 1rem;
 }
@@ -144,7 +148,7 @@ main {
 }
 
 .main-content {
-    background-color: white;
+    background-color: var(--primary-background);
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -152,7 +156,7 @@ main {
     margin: 0;
 }
 
-/* SIDEBAR  --------------------------------------- */
+/* SIDEBAR  ------------------------------------------ */
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -162,45 +166,45 @@ main {
 }
 
 .sidebar-cards {
-    background-color: white;
+    background-color: var(--primary-background);
     padding: 1.5rem;
 }
 
 .sidebar ul li {
     list-style: none;
-    color: black;
+    color: var(--primary-text-color);
     padding-bottom: 0.5rem;
 }
 
 .sidebar a {
-    color: black;
+    color: var(--primary-text-color);
     text-decoration: none;
     font-size: 1rem;
 }
 
 .sidebar a:hover {
-    border-bottom: 2px solid #547F54;
+    border-bottom: 2px solid var(--primary-color);
 }
 
-/* HERO SECTION  ---------------------------------- */
+/* HERO SECTION  ------------------------------------ */
 #hero-section {
     padding: 0.5rem;
 }
 
 #hero-section a:hover {
-    border-bottom: 2px solid #547F54;
+    border-bottom: 2px solid var(--primary-color);
 }
 
-/* ARTICLES  -------------------------------------- */
+/* ARTICLES  ---------------------------------------- */
 .main-article {
-    background-color: white;
+    background-color: var(--primary-background);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     align-items: start;
     padding: 1rem;
     margin-bottom: 1rem;
-    border-bottom: 3px solid #EFE7DF;
+    border-bottom: 3px solid var(--secondary-background);
 }
 
 .main-article > div img {
@@ -217,20 +221,20 @@ main {
 
 /* Article links */
 article a {
-    color: #547F54;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
     padding-top: 0.5rem;
 }
 
-/* ARTICLE LIST  ----------------------------------- */
+/* ARTICLE LIST  ------------------------------------- */
 .article-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 2rem;
     padding-bottom: 1rem;
     gap: 2rem;
-    border-bottom: 3px solid #EFE7DF;
+    border-bottom: 3px solid var(--secondary-background);
 }
 
 .article-list > div {
@@ -250,13 +254,13 @@ article a {
 }
 
 .article-list a:hover {
-    border-bottom: 2px solid #547F54;
+    border-bottom: 2px solid var(--primary-color);
     width: fit-content;
 }
 
-/* FOOTER  ---------------------------------------- */
+/* FOOTER  ------------------------------------------- */
 footer {
-    background-color: white;
+    background-color: var(--primary-background);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -268,7 +272,7 @@ footer a{
     text-decoration: none;
     font-weight: bold;
     font-size: 2rem;
-    color: black;
+    color: var(--primary-text-color);
     text-transform: uppercase;
     position: relative;
     display: inline-block;
@@ -278,7 +282,7 @@ footer a{
 /* footer moves disturbingly when hovering - try box-sizing fix */
 footer a:hover {
     border-bottom-style: solid;
-    border-color: #547F54;
+    border-color: var(--primary-color);
     transition: 0.1s ease;
 }
 
