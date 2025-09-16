@@ -204,12 +204,12 @@ main {
 .article-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 1rem;
-    margin: 1rem;
+    margin: 2rem;
+    padding-bottom: 1rem;
     gap: 2rem;
 }
 
-.article-list > div img{
+.article-list > div img {
     object-fit: contain;
     width: 100%;
     border-radius: 3px;
@@ -219,8 +219,15 @@ main {
     padding-bottom: 0.5rem;
 }
 
+.article-list > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .article-list a:hover {
     border-bottom: 2px solid #547F54;
+    width: fit-content;
 }
 
 .main-article ul {
