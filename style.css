@@ -158,6 +158,14 @@ main {
     margin: 0;
 }
 
+.recipe {
+    margin: 1rem;
+}
+
+.recipe ul{
+    margin: 1rem;
+}
+
 /* SIDEBAR  ------------------------------------------ */
 .sidebar {
     display: flex;
