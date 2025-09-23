@@ -95,6 +95,14 @@ header {
 }
 
 /* Navigation - switch to hamburger menu later */
+/* hamburger med details, dölj pil med 
+
+details summary::marker {
+    content: "";
+}
+
+kolla lektion på github 23/9
+*/
 .main-nav {
     display: flex;
     flex-direction: row;
@@ -156,14 +164,6 @@ main {
     flex-direction: column;
     gap: 2rem;
     margin: 0;
-}
-
-.recipe {
-    margin: 1rem;
-}
-
-.recipe ul{
-    margin: 1rem;
 }
 
 /* SIDEBAR  ------------------------------------------ */
@@ -268,6 +268,16 @@ article a {
     width: fit-content;
 }
 
+/* RECIPES  ------------------------------------------- */
+.recipe {
+    margin: 1rem;
+    border-bottom: 3px solid var(--secondary-background);
+}
+
+.recipe ul{
+    margin: 1rem;
+}
+
 /* FOOTER  ------------------------------------------- */
 footer {
     background-color: var(--primary-background);
@@ -303,3 +313,5 @@ footer ul {
     padding: 0;
     gap: 3rem;
 }
+
+/* MEDIA QUERIES  ------------------------------------- */
