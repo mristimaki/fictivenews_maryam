@@ -1,8 +1,9 @@
 /* CSS VARIABLES -------------------------------------- */
 :root {
-    --primary-color: #547F54;
+    --primary-color: #547f54;
     --primary-background: white;
     --secondary-background: #EFE7DF;
+    --hover-background: rgba(84, 127, 84, 0.5);
     --primary-text-color: black;
     --secondary-text-color: gray;
     --border-radius: 7px;
@@ -184,16 +185,20 @@ main {
     list-style: none;
     color: var(--primary-text-color);
     padding-bottom: 0.5rem;
+    padding: 0.75rem;
+    margin: 0 -1.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar ul li:hover {
+    background-color: var(--hover-background);
+    cursor: pointer;
 }
 
 .sidebar a {
     color: var(--primary-text-color);
     text-decoration: none;
     font-size: 1rem;
-}
-
-.sidebar a:hover {
-    border-bottom: 2px solid var(--primary-color);
 }
 
 /* HERO SECTION  ------------------------------------ */
@@ -270,7 +275,9 @@ article a {
 
 /* RECIPES  ------------------------------------------- */
 .recipe {
-    margin: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-bottom: 3rem;
     border-bottom: 3px solid var(--secondary-background);
 }
 
