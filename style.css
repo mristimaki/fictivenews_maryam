@@ -46,6 +46,10 @@ h4 {
     font-size: clamp(1.1rem, 2.5vw, 1.4rem);
 }
 
+nav i {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
 blockquote {
     text-align: center;
     font-style: italic;
@@ -95,16 +99,9 @@ header {
     color: var(--primary-text-color);
 }
 
-/* Navigation - switch to hamburger menu later */
-/* hamburger med details, dölj pil med 
-
-details summary::marker {
-    content: "";
-}
-
-kolla lektion på github 23/9
-*/
+/* Navigation */
 .main-nav {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -141,6 +138,80 @@ kolla lektion på github 23/9
 .main-nav .active {
     border-bottom-style: solid;
     border-color: var(--primary-color);
+}
+
+/* Hamburger menu */
+#hamburger-menu {
+    position: relative;
+    display: block;
+}
+
+details > nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-background);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+details > nav > ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+}
+
+details > nav > ul > li {
+    list-style: none;
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0;
+    transition: background-color 0.2s ease;
+}
+
+details > nav > ul > li:hover {
+    background-color: var(--hover-background);
+    cursor: pointer;
+}
+
+details > nav > ul > li > a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+}
+
+details i {
+    color: var(--primary-color);
+}
+
+details .open {
+    display: none;
+}
+
+details[open] .open {
+    display: inline;
+}
+
+details .closed {
+    display: inline;
+}
+
+details[open] .closed {
+    display: none;
+}
+
+details summary::marker {
+    content: "";
 }
 
 /* LAYOUT COMPONENTS  -------------------------------- */
@@ -283,6 +354,7 @@ article a {
 
 .recipe ul{
     margin: 1rem;
+    list-style: circle
 }
 
 /* FOOTER  ------------------------------------------- */
@@ -322,3 +394,22 @@ footer ul {
 }
 
 /* MEDIA QUERIES  ------------------------------------- */
+@media (max-width:768px) {
+    .main-nav ul {
+        display: none;
+    }
+
+    #hamburger-menu {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    #hamburger-menu {
+        display: none;
+    }
+
+    .main-nav ul {
+        display: flex;
+    }
+}

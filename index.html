@@ -24,11 +24,26 @@
         </div>
         <nav class="main-nav">
             <!-- Lägg eventuellt in datum och tid i eller under navbaren om 
-             det finns tid. även sign in / sign up knappar längst upp till höger 
-             testa göra hamburgermeny med details -->
-            
-             
-            <!-- Primary navigation -->
+             det finns tid. även sign in / sign up knappar längst upp till höger -->           
+            <details id="hamburger-menu">
+                <summary>
+                    <i class="fa-solid fa-bars closed"></i>
+                    <i class="fa-solid fa-xmark open"></i>
+                </summary>
+                <!-- Mobile navigation menu -->
+                <nav>
+                    <ul>
+                        <li><a href="index.html" title="Homepage" class="active">home</a></li>
+                        <li><a href="/trail-and-table.html" title="Hiking guides, outdoor cooking and campfire techniques">trail &amp; table</a></li>
+                        <li><a href="/natures-medicine.html" title="Health benefits of nature and outdoor wellness">nature's medicine</a></li>
+                        <li><a href="/community-harvest.html" title="Stories about food bringing communities together">community harvest</a></li>
+                        <li><a href="/science-soil.html" title="Latest research on nutrition and environmental health">science &amp; soil</a></li>
+                        <li><a href="/gathered-recipes.html" title="Gathered recipes">gathered recipes</a></li>
+                    </ul>
+                </nav>
+            </details>
+
+            <!-- Desktop navigation -->
             <ul>
                 <li><a href="index.html" title="Homepage" class="active">home</a></li>
                 <li><a href="/trail-and-table.html" title="Hiking guides, outdoor cooking and campfire techniques">trail &amp; table</a></li>
