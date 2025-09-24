@@ -243,6 +243,9 @@ main {
 }
 
 /* SIDEBAR  ------------------------------------------ */
+/* the margin: 0 -1.5rem; on li elements (for stretching
+the hover background full width) is making it difficult to 
+align li items and h3 */
 .sidebar {
     display: flex;
     flex-direction: column;
