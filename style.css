@@ -6,10 +6,15 @@
     --hover-background: rgba(84, 127, 84, 0.5);
     --primary-text-color: black;
     --secondary-text-color: gray;
-    --border-radius: 7px;
+    --border-radius: 5px;
     --border-width: 3px;
     --font-primary: "Lato", serif;
     --font-heading: "Quattrocento", serif;
+
+    /* News-feed font-sizes */
+    --news-category-size: clamp(0.9rem, 2vw, 1.1rem);
+    --news-heading-size: clamp(1rem 2.2vw, 1.25rem);
+    --news-text-size: clamp(0.8rem, 1.6vw, 0.9rem);
 }
 
 /* RESET & BASE STYLES  ------------------------------- */
@@ -21,7 +26,7 @@
 body {
     background-color: var(--secondary-background);
     font-family: var(--font-primary);
-    font-size: clamp(1rem, 2vw, 1.125rem);
+    font-size: clamp(0.875rem, 1.8vw, 1rem);
 }
 
 /* TYPOGRAPHY  --------------------------------------- */
@@ -152,10 +157,11 @@ details > nav {
     left: 0;
     right: 0;
     background-color: var(--primary-background);
+    border: 2px solid var(--primary-color); /* just for debugging */
     width: 100%;
     display: flex;
     justify-content: center;
-    z-index: 1000;
+    z-index: 9999;
 }
 
 details > nav > ul {
@@ -223,7 +229,7 @@ main {
     display: grid;
     grid-template-columns: 250px 1fr;
     gap: 0.3rem;
-    max-width: 1200px;
+    max-width: 800px;
     padding: 2rem;
     margin-left: auto;
     margin-right: auto;
@@ -231,10 +237,9 @@ main {
 
 .main-content {
     background-color: var(--primary-background);
-    padding: 0.5rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     margin: 0;
 }
 
@@ -289,14 +294,13 @@ main {
     gap: 0.5rem;
     align-items: start;
     padding: 1rem;
-    margin-bottom: 1rem;
     border-bottom: 3px solid var(--secondary-background);
 }
 
 .main-article > div img {
     object-fit: contain;
     width: 100%;
-    border-radius: 3px;
+    border-radius: var(--border-radius);
 }
 
 .main-article ul {
@@ -315,24 +319,25 @@ article a {
 
 /* ARTICLE LIST  ------------------------------------- */
 .article-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 2rem;
-    padding-bottom: 1rem;
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+    gap: 1rem;
     border-bottom: 3px solid var(--secondary-background);
 }
 
 .article-list > div {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
 }
 
 .article-list > div img {
-    object-fit: contain;
+    object-fit: cover; /* instead of contain for better adjustment */
     width: 100%;
-    border-radius: 3px;
+    height: 180px; /* for consistency */
+    border-radius: var(--border-radius);
+    order: -1; /* keeps img on top on mobile */
 }
 
 .article-list header {
@@ -342,6 +347,20 @@ article a {
 .article-list a:hover {
     border-bottom: 2px solid var(--primary-color);
     width: fit-content;
+}
+
+.article-list h3 {
+    font-size: var(--news-category-size);
+    color: var(--primary-color);
+    font-weight: normal;
+}
+
+.article-list h4 {
+    font-size: var(--news-heading-size);
+}
+
+.article-list p:not(.by-author) {
+    font-size: var(--news-text-size);
 }
 
 /* RECIPES  ------------------------------------------- */
