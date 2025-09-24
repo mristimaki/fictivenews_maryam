@@ -32,7 +32,7 @@ body {
 /* TYPOGRAPHY  --------------------------------------- */
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
-    padding-bottom: 0.3rem;
+    padding-bottom: 0.1rem;
 }
 
 h1 {
@@ -297,7 +297,7 @@ main {
 }
 
 .main-article > div img {
-    object-fit: contain;
+    object-fit: cover;
     width: 100%;
     border-radius: var(--border-radius);
 }
@@ -429,6 +429,17 @@ footer ul {
 
     #hamburger-menu {
         display: block;
+    }
+
+    /* Sidebar moves on top on smaller screens, hiding recipes */
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        padding: 1rem;
+    }
+
+    .recipe-links {
+        display: none;
     }
 }
 
