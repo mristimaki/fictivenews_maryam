@@ -364,8 +364,10 @@ article a {
 
 /* RECIPES  ------------------------------------------- */
 .recipe {
-    margin: 2rem;
-    padding-bottom: 3rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    padding-bottom: 2rem;
     border-bottom: 3px solid var(--secondary-background);
 }
 
