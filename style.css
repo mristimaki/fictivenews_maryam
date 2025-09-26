@@ -151,20 +151,25 @@ header {
     display: block;
 }
 
-details > nav {
+details {
+    position: relative;
+}
+
+details summary div {
+    width: 100vw; /* det här gjorde att min ham-meny sträcker sig hela bredden*/
+}
+
+details nav {
     position: absolute;
-    top: 100%;
     left: 0;
-    right: 0;
     background-color: var(--primary-background);
-    border: 2px solid var(--primary-color); /* just for debugging */
-    width: 100%; /* does not work */
+    width: 100vw; /* does not work */
     display: flex;
     justify-content: center;
     z-index: 9999;
 }
 
-details > nav > ul {
+details nav ul {
     display: flex;
     flex-direction: column;
     background-color: var(--primary-background);
@@ -173,7 +178,7 @@ details > nav > ul {
     margin: 0;
 }
 
-details > nav > ul > li {
+details nav ul li {
     list-style: none;
     width: 100%;
     padding: 1rem;
@@ -181,12 +186,12 @@ details > nav > ul > li {
     transition: background-color 0.2s ease;
 }
 
-details > nav > ul > li:hover {
+details nav ul li:hover {
     background-color: var(--hover-background);
     cursor: pointer;
 }
 
-details > nav > ul > li > a {
+details nav ul li a {
     color: var(--primary-text-color);
     text-decoration: none;
     font-size: 1rem;
@@ -243,27 +248,27 @@ main {
 }
 
 /* SIDEBAR  ------------------------------------------ */
-/* the margin: 0 -1.5rem; on li elements (for stretching
-the hover background full width) is making it difficult to 
-align li items and h3 */
+/* it worked when only focusing on padding on the li elements */
 .sidebar {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    gap: 1.5rem;
+    gap: 1rem;
     background-color: transparent;
 }
 
 .sidebar-cards {
     background-color: var(--primary-background);
-    padding: 1.5rem;
+    padding: 1.5rem; /* om jag tar bort denna så åker hover effekten utanför hela sidebaren */
 }
 
 .sidebar ul li {
     list-style: none;
     color: var(--primary-text-color);
-    padding-bottom: 0.5rem;
-    padding: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
     margin: 0 -1.5rem;
     transition: background-color 0.2s ease;
 }
