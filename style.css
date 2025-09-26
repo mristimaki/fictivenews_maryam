@@ -105,22 +105,25 @@ header {
 }
 
 /* Navigation */
+/* After some debugging it seems that the padding in the navbar, 
+   navbar li and nav a is causing the mobile nav to push too far
+   to the right */
 .main-nav {
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 1rem;
+    padding: 0; /* a bit better */
     border-top: var(--border-width) solid var(--primary-color);
 }
 
 .main-nav ul {
     display: flex;
     list-style: none;
-    margin: 0;
+    margin: 1rem;
     padding: 0;
-    gap: 3rem;
+    gap: 1rem;
 }
 
 .main-nav a {
@@ -134,7 +137,8 @@ header {
     text-align: center;
 }
 
-.main-nav a:hover {
+/* Added id to desktop nav to remove border-bottom on mobile */
+#desktop a:hover {
     border-bottom-style: solid;
     border-color: var(--primary-color);
     transition: 0.1s ease;
@@ -146,6 +150,9 @@ header {
 }
 
 /* Hamburger menu */
+/* Right now the details stretches much better but 
+it's something that makes it too far to the right 
+so you'll need to scroll horizontally as well */
 #hamburger-menu {
     position: relative;
     display: block;
@@ -156,11 +163,12 @@ details {
 }
 
 details summary div {
-    width: 100vw; /* det här gjorde att min ham-meny sträcker sig hela bredden*/
+    height: 100%;
+    width: 100vw; /* det här gjorde att min mobil-meny sträcker sig hela bredden */
 }
 
 details nav {
-    position: absolute;
+    position: relative;
     left: 0;
     background-color: var(--primary-background);
     width: 100vw; /* does not work */
@@ -180,9 +188,8 @@ details nav ul {
 
 details nav ul li {
     list-style: none;
-    width: 100%;
-    padding: 1rem;
-    margin: 0;
+    padding: 0;
+    margin: 1rem;
     transition: background-color 0.2s ease;
 }
 
@@ -203,6 +210,7 @@ details nav ul li a {
 
 details i {
     color: var(--primary-color);
+    margin: 0.5rem;
 }
 
 details .open {
@@ -248,7 +256,6 @@ main {
 }
 
 /* SIDEBAR  ------------------------------------------ */
-/* it worked when only focusing on padding on the li elements */
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -259,7 +266,7 @@ main {
 
 .sidebar-cards {
     background-color: var(--primary-background);
-    padding: 1.5rem; /* om jag tar bort denna så åker hover effekten utanför hela sidebaren */
+    padding: 1.5rem;
 }
 
 .sidebar ul li {
