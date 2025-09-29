@@ -362,19 +362,13 @@ article a {
     padding-bottom: 0.5rem;
 }
 
+.category {
+    margin-bottom: 0.5rem;
+}
+
 .article-list a:hover {
     border-bottom: 2px solid var(--primary-color);
     width: fit-content;
-}
-
-.article-list h3 {
-    font-size: var(--news-category-size);
-    color: var(--primary-color);
-    font-weight: normal;
-}
-
-.article-list h4 {
-    font-size: var(--news-heading-size);
 }
 
 .article-list p:not(.by-author) {
