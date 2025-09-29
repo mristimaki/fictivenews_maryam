@@ -95,9 +95,6 @@ header {
 }
 
 /* Navigation */
-/* After some debugging it seems that the padding in the navbar, 
-   navbar li and nav a is causing the mobile nav to push too far
-   to the right */
 .main-nav {
     position: relative;
     display: flex;
