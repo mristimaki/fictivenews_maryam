@@ -75,16 +75,6 @@ blockquote {
     color: var(--secondary-text-color);
 }
 
-/* BUTTONS & FORM ELEMENTS  --------------------------- */
-button {
-    background-color: var(--primary-color);
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    border-radius: var(--border-radius);
-    border: 0;
-    appearance: none;
-}
-
 /* HEADER & NAVIGATION  ------------------------------ */
 header {
     background-color: var(--primary-background);
@@ -137,7 +127,6 @@ header {
     text-align: center;
 }
 
-/* Added id to desktop nav to remove border-bottom on mobile */
 #desktop a:hover {
     border-bottom-style: solid;
     border-color: var(--primary-color);
@@ -161,7 +150,7 @@ details {
     position: relative;
 }
 
-details summary div {
+#hamburger-menu summary div {
     height: 100%;
     width: 100vw; /* det här gjorde att min mobil-meny sträcker sig hela bredden */
 }
@@ -295,6 +284,10 @@ main {
     cursor: pointer;
 }
 
+#recipe-mobile summary h4 {
+    display: inline;
+}
+
 /* HERO SECTION  ------------------------------------ */
 #hero-section {
     padding: 0.5rem;
@@ -386,7 +379,7 @@ article a {
 
 .recipe ul{
     margin: 1rem;
-    list-style: circle
+    list-style: circle;
 }
 
 .recipe img {
