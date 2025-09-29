@@ -150,12 +150,11 @@ header {
 }
 
 /* Hamburger menu */
-/* Right now the details stretches much better but 
-it's something that makes it too far to the right 
-so you'll need to scroll horizontally as well */
 #hamburger-menu {
     position: relative;
     display: block;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 details {
@@ -211,6 +210,7 @@ details nav ul li a {
 details i {
     color: var(--primary-color);
     margin: 0.5rem;
+    align-self: center;
 }
 
 details .open {
@@ -289,6 +289,10 @@ main {
     color: var(--primary-text-color);
     text-decoration: none;
     font-size: 1rem;
+}
+
+#recipe-mobile summary {
+    cursor: pointer;
 }
 
 /* HERO SECTION  ------------------------------------ */
@@ -465,5 +469,9 @@ footer ul {
 
     .main-nav ul:nth-child(2) {
         display: flex;
+    }
+
+    #recipe-mobile {
+        display: none;
     }
 }
