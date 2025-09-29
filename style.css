@@ -229,7 +229,7 @@ details[open] .closed {
     display: none;
 }
 
-details summary::marker {
+#hamburger-menu summary::marker {
     content: "";
 }
 
@@ -291,7 +291,7 @@ main {
     font-size: 1rem;
 }
 
-#recipe-mobile summary {
+#recipe-mobile details {
     cursor: pointer;
 }
 
