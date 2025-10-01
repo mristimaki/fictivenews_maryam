@@ -282,6 +282,12 @@ main {
     font-size: 1rem;
 }
 
+
+/* Mobile version */
+#recipe-mobile a {
+    font-size: 0.80rem;
+}
+
 #recipe-mobile details {
     cursor: pointer;
 }
