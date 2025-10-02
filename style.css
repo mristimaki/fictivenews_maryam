@@ -305,7 +305,7 @@ och länkar på mobil */
 
 /* HERO SECTION  ------------------------------------ */
 #hero-section {
-    padding: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 #hero-section a:hover {
@@ -319,7 +319,11 @@ och länkar på mobil */
     flex-direction: column;
     gap: 0.5rem;
     align-items: start;
-    padding: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
     border-bottom: 3px solid var(--secondary-background);
 }
 
@@ -347,8 +351,10 @@ article a {
 .article-list {
     display: flex;
     flex-direction: column;
-    margin: 1rem;
-    padding: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-bottom: 1rem;
     gap: 1rem;
     border-bottom: 3px solid var(--secondary-background);
 }
@@ -385,7 +391,8 @@ article a {
 
 /* RECIPES  ------------------------------------------- */
 .recipe {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     margin-right: 2rem;
     margin-left: 2rem;
     padding-bottom: 2rem;
