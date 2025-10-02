@@ -282,6 +282,13 @@ main {
     font-size: 1rem;
 }
 
+.recipe-links a {
+    font-size: 0.9rem;
+}
+
+/* Fixa så att receptlistan är mindre på både desktop
+och mobil, men också större skillnad mellan rubrik
+och länkar på mobil */
 
 /* Mobile version */
 #recipe-mobile a {
