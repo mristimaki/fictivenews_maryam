@@ -296,10 +296,6 @@ main {
     font-size: 0.9rem;
 }
 
-/* Fixa så att receptlistan är mindre på både desktop
-och mobil, men också större skillnad mellan rubrik
-och länkar på mobil */
-
 /* Mobile version */
 #recipe-mobile a {
     font-size: 0.80rem;
@@ -377,9 +373,9 @@ article a {
 .article-list > div img {
     object-fit: cover; /* instead of contain for better adjustment */
     width: 100%;
-    height: clamp(100px, 20vw, 180px); /* for consistency */
+    height: clamp(100px, 20vw, 180px);
     border-radius: var(--border-radius);
-    order: -1; /* keeps img on top on mobile */
+    order: -1;
 }
 
 .article-list header {
@@ -420,7 +416,7 @@ article a {
     height: clamp(100px, 15vw, 180px);
     margin-bottom: 1rem;
     border-radius: var(--border-radius);
-    order: -1; /* keeps img on top on mobile */
+    order: -1;
 }
 
 /* FOOTER  ------------------------------------------- */
@@ -444,7 +440,6 @@ footer a{
     text-align: center;
 }
 
-/* footer moves disturbingly when hovering - try box-sizing fix */
 footer a:hover {
     border-bottom-style: solid;
     border-color: var(--primary-color);
@@ -460,7 +455,7 @@ footer ul {
 }
 
 /* MEDIA QUERIES  ------------------------------------- */
-@media (max-width:768px) {
+@media (max-width:600px) {
     .main-nav ul:nth-child(2) {
         display: none;
     }
@@ -478,7 +473,19 @@ footer ul {
     .main-nav ul li {
         margin: 0 -1rem;
     }
+}
 
+@media (min-width: 600px) {
+    #hamburger-menu {
+        display: none;
+    }
+
+    .main-nav ul:nth-child(2) {
+        display: flex;
+    }
+}
+
+@media (max-width:768px) {
     /* Sidebar moves on top on smaller screens, hiding recipes */
     .content-wrapper {
         grid-template-columns: 1fr;
@@ -495,15 +502,7 @@ footer ul {
     }
 }
 
-@media (min-width: 769px) {
-    #hamburger-menu {
-        display: none;
-    }
-
-    .main-nav ul:nth-child(2) {
-        display: flex;
-    }
-
+@media (min-width:768px) {
     #recipe-mobile {
         display: none;
     }
