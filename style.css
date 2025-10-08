@@ -473,6 +473,7 @@ footer ul {
     .main-nav ul li {
         margin: 0 -1rem;
     }
+
 }
 
 @media (min-width: 600px) {
@@ -485,7 +486,7 @@ footer ul {
     }
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
     /* Sidebar moves on top on smaller screens, hiding recipes */
     .content-wrapper {
         grid-template-columns: 1fr;
@@ -500,6 +501,11 @@ footer ul {
     .seasonal-focus {
         display: none;
     }
+
+    #recipe-mobile {
+        display: block;
+    }
+
 }
 
 @media (min-width:768px) {
