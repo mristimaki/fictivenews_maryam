@@ -486,7 +486,7 @@ footer ul {
     }
 }
 
-@media (max-width:767px) {
+@media (max-width:769px) {
     /* Sidebar moves on top on smaller screens, hiding recipes */
     .content-wrapper {
         grid-template-columns: 1fr;
@@ -508,7 +508,7 @@ footer ul {
 
 }
 
-@media (min-width:768px) {
+@media (min-width:769px) {
     #recipe-mobile {
         display: none;
     }
